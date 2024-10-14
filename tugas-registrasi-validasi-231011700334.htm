@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Registrasi & Validasi - Silverqueen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Warna latar belakang yang lebih terang */
+        }
+        h2 {
+            color: #007bff; /* Warna biru untuk judul */
+        }
+        #registrasi-validasi {
+            border: 1px solid #007bff; /* Border biru untuk section */
+            border-radius: 10px; /* Sudut melengkung */
+            padding: 20px; /* Padding untuk konten */
+            background-color: #ffffff; /* Warna latar belakang putih untuk section */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Silverqueen</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="tugas-responsivitas-231011700334.html">Tugas Responsivitas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tugas-form-sederhana-231011700334.html">Tugas Form Sederhana</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tugas-checkbox-radio-231011700334.html">Tugas Checkbox & Radio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tugas-dropdown-textarea-231011700334.html">Tugas Dropdown & Textarea</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="tugas-registrasi-validasi-231011700334.html">Tugas Registrasi & Validasi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tugas-advance-components-231011700334.html">Tugas Advance Components</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Registrasi & Validasi -->
+<section id="registrasi-validasi" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Form Registrasi</h2>
+        <form id="registrasiForm">
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="nama" placeholder="Masukkan nama lengkap" required>
+                <div class="invalid-feedback">
+                    Nama lengkap tidak boleh kosong.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
+                <div class="invalid-feedback">
+                    Masukkan email yang valid.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Masukkan password (minimal 8 karakter)" minlength="8" required>
+                <div class="invalid-feedback">
+                    Password harus minimal 8 karakter.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Konfirmasi Password</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Masukkan kembali password" required>
+                <div class="invalid-feedback">
+                    Password harus sama dengan field Password.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Daftar</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" class="py-4 bg-dark text-light">
+    <div class="container text-center">
+        <p class="mb-0">Kontak Kami: 0812-3456-7890 | email@example.com</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Validasi Password dan Konfirmasi Password -->
+<script>
+    document.getElementById('registrasiForm').addEventListener('submit', function(event) {
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+
+        if (password !== confirmPassword) {
+            event.preventDefault();
+            document.getElementById('confirmPassword').setCustomValidity('Password tidak sama');
+            document.getElementById('confirmPassword').reportValidity();
+        } else {
+            document.getElementById('confirmPassword').setCustomValidity('');
+        }
+    });
+</script>
+
+</body>
+</html>

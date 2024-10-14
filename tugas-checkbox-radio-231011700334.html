@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 3: Checkbox & Radio - Survei Minat Baca</title>
+    <!-- Link ke Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">231011700334</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="tugas-responsivitas-231011700334.html">Tugas Responsivitas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tugas-form-sederhana-231011700334.html">Tugas Form Sederhana</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tugas-checkbox-radio-231011700334.html">Tugas Checkbox & Radio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tugas-dropdown-textarea-231011700334.html">Tugas Dropdown & Textarea</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tugas-registrasi-validasi-231011700334.html">Tugas Registrasi & Validasi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tugas-advance-components-231011700334.html">Tugas Advance Components</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Section Utama -->
+<section id="section-utama" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="mt-4 mt-lg-0">Survei Minat Baca</h2>
+                <p>Isi survei berikut untuk mengetahui preferensi membaca Anda. Jawaban Anda sangat membantu!</p>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Genre buku apa yang Anda sukai?</label><br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="genre1" value="Fiksi">
+                            <label class="form-check-label" for="genre1">Fiksi</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="genre2" value="Non-Fiksi">
+                            <label class="form-check-label" for="genre2">Non-Fiksi</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="genre3" value="Sains">
+                            <label class="form-check-label" for="genre3">Sains</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="genre4" value="Sejarah">
+                            <label class="form-check-label" for="genre4">Sejarah</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Berapa buku yang Anda baca dalam sebulan?</label><br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="jumlah-buku" id="jumlah1" value="1-3" checked>
+                            <label class="form-check-label" for="jumlah1">1-3</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="jumlah-buku" id="jumlah2" value="4-6">
+                            <label class="form-check-label" for="jumlah2">4-6</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="jumlah-buku" id="jumlah3" value="7+">
+                            <label class="form-check-label" for="jumlah3">7+</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kirim</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" class="py-4 bg-dark text-light">
+    <div class="container text-center">
+        <p class="mb-0">Kontak Kami: 0812-3456-7890 | email@example.com</p>
+    </div>
+</footer>
+
+<!-- Link ke Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
